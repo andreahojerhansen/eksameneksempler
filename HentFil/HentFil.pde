@@ -12,7 +12,7 @@ void setup() {
  // for (Dog d : db.myContainer) {
   //}
 
-  //Hele listen kigges igennem for key word fra servhForDog
+  //Hele listen kigges igennem for key word fra serchForDog
   for (int i = 0; i < db.myDogs.size(); i++) {
     Dog d = db.myDogs.get(i);
     println("Dog name " + d.Name + " Dog age " + d.Age);

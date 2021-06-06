@@ -8,8 +8,16 @@ public class DataHenter {
     //filen hentes
     String[] dogs = loadStrings("MinHundeListe.csv");
 
+/*
+filen ser sådan ud:
 
-   
+Alba;9;
+Max;12;
+Pixie;15;
+Buller;3;
+
+ */  
+ 
    // for loop der går ned gennem alle linjerne og opdeler elementerne ud på en arrayliste der hedder myDogs
     for (int i = 0; i < dogs.length; i++) {
 

@@ -11,6 +11,8 @@ void setup(){
   println(etager2 + "," + trapper2); //printer pure function
   println(lejelighed.etager + "," + lejelighed.trapper); //taeltrapper2 er pure da den ikke har ændret på denne værdi
 
+int summen = Adder(3, 4);
+println("Summen er " + summen);
 }
 
 class Hoejhuse{
@@ -35,4 +37,11 @@ int taelTrapper2(int etager2){ //her er værdien et parameter i funktionen og de
   return trapper2;
 }
 
+}
+
+int Adder(int a, int b) {
+  
+  int resultat = a + b;
+  println("Summen er " + resultat);
+  return resultat;
 }

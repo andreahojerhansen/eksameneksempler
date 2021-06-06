@@ -30,10 +30,14 @@ public class Betingelser {
   }
   
   public void Betingelse3(int i) {
-    
+    // hvis betingelse3 bliver kladt med 1 udskrives ingenting
     if (i != 1) {
-      println("Kfnoget annnnnaaæ");
-    } 
+      println("kaldt korrekt");
+    } else {
+            println("fejl! kaldt med 1");
+
+    }
+    
     
   }
   
@@ -48,7 +52,7 @@ println("Dette er gang " + i + " af " + antalGange);
 }
   
 
-public void BetingelseMedWhile(Boolean ditValg) {
+public void BetingelseMedBoolean(Boolean ditValg) {
 
 //vælges ved true
 if (ditValg) {

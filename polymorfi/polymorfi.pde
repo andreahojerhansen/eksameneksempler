@@ -5,6 +5,7 @@ Planter rodeTomater;
 Planter rodeJordbaer;
 Mad groenneTomater; //laver en instans af mad
 Tomat gulTomat; //laver en instans af en tomat (der både er mad og en plante)
+Mad minFlueSvamp;
 
    void setup() {
      mitPlanter = new Planter(); 
@@ -12,6 +13,8 @@ Tomat gulTomat; //laver en instans af en tomat (der både er mad og en plante)
      rodeTomater = new Tomat();
      gulTomat = new Tomat();
      rodeJordbaer = new Jordbaer();  
+     
+     minFlueSvamp = new FlueSvamp();
   }
 
   void draw(){
@@ -28,6 +31,8 @@ Tomat gulTomat; //laver en instans af en tomat (der både er mad og en plante)
     // mad OG plante
     gulTomat.gror(); //da den gule tomat er en tomat kan den kører både mad og plante programmet 
     gulTomat.spiselige();
+    
+    minFlueSvamp.erJegGiftig();
   }
 
 class Planter { //superklassen 
@@ -47,6 +52,11 @@ class Tomat extends Planter implements Mad{ //tomat er både plante og mad pga d
   void spiselige(){
     println(" Spiser Tomater" );
   }
+  
+  Boolean erJegGiftig() {
+    println("Jeg kan spises" );
+    return false;
+  }
 }
 
 class Jordbaer extends Planter {
@@ -56,7 +66,24 @@ class Jordbaer extends Planter {
   }
 }
 
+class FlueSvamp extends Planter  implements Mad{
+
+  void gror() { //her overrider vi Plante klassens 'gror' metode
+    println("Her gror vi FlueSvamp");
+  }
+  
+    void spiselige(){
+    println(" Jeg er ikke spiselig" );
+  }
+  
+    Boolean erJegGiftig() {
+    println("Jeg kan ikke spises" );
+    return true;
+  }
+}
+
 public interface Mad {
 
   void spiselige(); //denne metode der laver den i tomat klassen
+  Boolean erJegGiftig();
 }
